@@ -93,7 +93,7 @@ a.nav-tabs:hover {
 }
 .cursor {
   /* cursor: auto; */
-  cursor: url(./images/tiniest.jpg), auto;
+  cursor: url(assets/images/tiniest.jpg), auto;
 }
 .homepageContent {
   background-color: #161712;
