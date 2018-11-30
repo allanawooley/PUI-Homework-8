@@ -54,7 +54,10 @@ img {
 .dropdown-toggle {
   background-color: #16171200;
   color: #FFF;
-  width: 30%;
+  /* width: 30%; */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid;
 }
 .dropdown-menu {
   background-color: #16171200;
@@ -78,6 +81,12 @@ li {
 }
 .navbar {
   background-color: #16171200;
+}
+.navbar-header {
+  display: flex;
+  width: 19%;
+  justify-content: space-between;
+  align-items: center;
 }
 a.nav-tabs {
   padding-left: 10px;
