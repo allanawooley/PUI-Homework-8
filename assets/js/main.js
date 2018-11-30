@@ -1,9 +1,9 @@
 $(document).ready(function(){
   console.log("ready");
 
-  $("area").hover(function(){
-    $(".suitPart").addClass('tooltip');
-  });
+  // $("area").hover(function(){
+  //   $("div").addClass('tooltip');
+  // });
 
 
 
