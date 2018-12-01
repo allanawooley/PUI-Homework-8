@@ -1,6 +1,4 @@
-/* * {
-  background-color:black;
-} */
+/* basic styles */
 body {
   padding-top: 30px;
   background-color: #161712;
@@ -25,6 +23,13 @@ img {
   width: 100%;
   height: auto;
 }
+li {
+  color: #FFF;
+  font-size: 18pt;
+  padding-left: 20px;
+  text-decoration: none;
+}
+/* this manages my starry background */
 @-webkit-keyframes STAR-MOVE {
 	from {
 		background-position: 5% 5%
@@ -38,12 +43,17 @@ img {
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: 0;
-
 	-webkit-animation-name: STAR-MOVE;
 	-webkit-animation-duration: 450s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
 }
+/* makes my cursor an International Space Station */
+#cursor {
+  cursor: auto;
+  cursor: url("../images/tinyISS.png"), auto;
+}
+/* these classes manage my dropdown menu and navigation */
 .dropdown-toggle {
   background-color: #161712;
   color: #FFF;
@@ -66,12 +76,6 @@ img {
 .dropdown-item:hover {
   background-color: red;
 }
-li {
-  color: #FFF;
-  font-size: 18pt;
-  padding-left: 20px;
-  text-decoration: none;
-}
 .navbar {
   background-color: #16171200;
 }
@@ -93,15 +97,9 @@ a.nav-tabs:visited {
 a.nav-tabs:hover {
   color: red;
 }
-.cursor {
-  /* cursor: auto; */
-  cursor: url(assets/images/tinierISSS.jpg), auto;
-}
+/* basic div styles */
 .homepageContent {
   background-color: #161712;
-}
-.curious {
-  /* background-color: #161712; */
 }
 .container-fluid {
   background-color: #161712;
@@ -135,34 +133,13 @@ a.nav-tabs:hover {
   background-color: green;
   font-size: 18pt;
 }
-/* .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 150px;
-  background-color: blue;
-  color: #fff;
-  text-align: center;
-  border-radius: 8px;
-  padding: 10px 10px;
-  font-size: 24pt;
-  position: absolute;
-  z-index: 1;
-}
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-} */
-/* .tooltip.suitPart .tooltipInner {
-  background-color: blue;
-  font-size: 18pt;
-  color: white;
-  position: absolute;
-  z-index: 1;
-} */
 .interactiveEMU {
   background-color: #16171200;
   margin-left: 33%;
   transition: all 1.4s ease-in;
   z-index: 1;
 }
+/* animations for suit parts, applied in JavaScript */
 .legSpin {
   transform: translate(400px) rotate(550deg) scale(2);
 }
@@ -203,6 +180,7 @@ a.nav-tabs:hover {
 .saferZoom {
   -webkit-animation: translate 12s infinite ease-in;
 }
+/* SAFER/jetpack animation */
 @-webkit-keyframes translate {
   0% {
     -webkit-transform:
@@ -229,6 +207,7 @@ a.nav-tabs:hover {
     translate(0, -800px);
   }
 }
+/* containers for my information blocks */
 .partInfo {
   display: flex;
   flex-direction: column;
@@ -318,6 +297,16 @@ a.nav-tabs:hover {
   z-index: 2;
   background-color: #16171200;
 }
+/*for very large screens,to control */
+@media only screen and (min-width: 956px) {
+  .desktop {
+    display: show;
+  }
+  .mobile {
+    display: none;
+  }
+}
+/* for mobile screens */
 @media only screen and (max-width: 600px) {
     .interactiveEMU {
       margin-left: 15%;
@@ -328,6 +317,12 @@ a.nav-tabs:hover {
     }
     h1 {
       font-size: 24pt;
+    }
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: show;
     }
     .navbar-header {
       display: flex;
@@ -463,6 +458,7 @@ a.nav-tabs:hover {
       }
     }
 }
+/* for mid-size screens */
 @media only screen and (min-width: 601px) and (max-width: 955px){
   .interactiveEMU {
     margin-left: 20%;
@@ -473,6 +469,12 @@ a.nav-tabs:hover {
   }
   h1 {
     font-size: 22pt;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: show;
   }
   .navbar-header {
     display: flex;

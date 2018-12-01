@@ -1,51 +1,15 @@
 $(document).ready(function(){
   console.log("ready");
 
-  // $("area").hover(function(){
-  //   $("div").addClass('tooltip');
-  // });
-
-
-
-  // $('[data-toggle="tooltip"]').tooltip({
-  //   container: "interactiveEMU"
-  // });
-  //
-  //     if ($(this)[0].hasAttribute('data-type')) {
-  //         options['template'] =
-  //         	'<div class="tooltip " class="suitPart "' + $(this).attr("data-type") + ' role="tooltip">' +
-  //         	'	<div class="tooltipInner"></div>' +
-  //         	'</div>';
-  //     }
-
-  //     $(this).tooltip(options);
-  // });
-  //
-  // var emuSuit = document.getElementsByClassName('interactiveEMU');
-  //
-  // document.getElementByID('helmet')[0].onclick = function() {
-  //   if(this.innerHTML === 'zoomOutLeft')
-  //   {
-  //     boxOne.classList.add('horizTranslate');
-  //   } else {
-  //     this.innerHTML = 'helmet';
-  //     var computedStyle = window.getComputedStyle(interactiveEMU),
-  //         marginLeft = computedStyle.getPropertyValue('margin-left');
-  //     interactiveEMU.style.marginLeft = marginLeft;
-  //     interactiveEMU.classList.remove('horizTranslate');
-  //   }
-  // }
-var astro =null
+//these functions add specific transitions and animations on click for all of my suit parts and menu items//
 
   $(".helmet").click(function() {
-    console.log("click")
     $(".interactiveEMU").toggleClass('headSpin');
     $(".helmetInfo").toggleClass('exitLeft');
     $(".curious").remove();
    });
 
    $("#helmetMenu").click(function() {
-     console.log("click")
      $(".interactiveEMU").toggleClass('headSpin');
      $(".helmetInfo").toggleClass('exitLeft');
      $(".curious").remove();
@@ -118,7 +82,7 @@ var astro =null
 
   $(".backpack").click(function(){
     $(".interactiveEMU").remove();
-    $(".backpackInfo").toggleClass('backpackInfoEnter');
+    $(".backpackInfo").toggleClass('exitLeft');
     $(".backpackPic").toggleClass('backpackEnterLeft');
     $(".curious").remove();
   });
@@ -143,16 +107,3 @@ var astro =null
   });
 
 });
-
-// function reset() {
-//   .remove('exitLeft');
-//   .remove('saferZoom');
-//   .remove('backpackEnterLeft');
-//   .remove('backpackInfoEnter');
-//   .remove('underwearEnterLeft');
-//   .remove('materialEnterLeft');
-//   .remove('legSpin');
-//   .remove('gloveSpin');
-//   .remove('chestSpin');
-//   .remove('headSpin');
-// }
